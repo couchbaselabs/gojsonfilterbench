@@ -69,7 +69,7 @@ func (m *FlexibleMatcher) Match(data []byte, expression *govaluate.EvaluableExpr
 	return result.(bool), err
 }
 
-func BenchmarkFlexibleMatcher(b *testing.B) {
+func BenchmarkJsonPathWithGoValuate(b *testing.B) {
 	data, totalBytes, err := generateRandomData(1)
 	if err != nil || len(data) == 0 {
 		b.Fatalf("Data generation error: %s", err)
